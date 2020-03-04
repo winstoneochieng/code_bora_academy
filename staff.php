@@ -21,8 +21,11 @@ require 'header.php';
             </div>
         </div>
     </div>
+    <br>
+    <hr>
 </div>
-<br> <br> <br> <br> <br>
+<br> <br>  <br> <br> <br>
+
 
     <div class="row">
         <div class="col-md-4 col-lg-4 col-xl-4">
