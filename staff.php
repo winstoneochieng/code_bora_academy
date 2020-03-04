@@ -1,7 +1,8 @@
 <?php
 require 'header.php';
-
 ?>
+
+
 <br> <br>
 <div class="container">
     <div class="row">
@@ -21,9 +22,7 @@ require 'header.php';
         </div>
     </div>
 </div>
-<br>
-
-
+<br> <br> <br> <br> <br>
 
     <div class="row">
         <div class="col-md-4 col-lg-4 col-xl-4">
@@ -137,9 +136,7 @@ require 'header.php';
 
 
 <?php
-
 require 'footer.php';
-
 ?>
 
 
