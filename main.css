@@ -12,6 +12,7 @@
     margin-top: 0px;
     position: sticky;
     top: 0px;
+    box-shadow: 5px 5px 5px 5px dimgrey;
 }
 
 .logo{
@@ -161,6 +162,7 @@
 .section-b a button{
     padding: 3px;
     color: #be0000;
+    border-radius: 3px;
 }
 footer{
     height: 43vh;
@@ -172,7 +174,7 @@ footer{
     /*margin-top: 10px;*/
 }
 .general-contacts p{
-    margin-right: 157vh;
+    margin-right: 160vh;
 }
 .form-inline{
     position: absolute;

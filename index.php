@@ -23,12 +23,12 @@
     </label>
 
     <ul class="menu">
-        <a href="#">Home</a>
+        <a href="index.php">Home</a>
         <a href="#">About</a>
-        <a href="#">Staff</a>
+        <a href="staff.php">Staff</a>
         <a href="#">Events</a>
-        <a href="#">Courses</a>
-        <a href="#">Register</a>
+        <a href="contact_form.php">Contacts</a>
+        <a href="student_reg.php">Register</a>
         <label for="menu-checkbox" class="hide-menu-btn">
             <!--            <i class="fas fa-times"></i>-->
             <ion-icon name="close-outline"></ion-icon>
