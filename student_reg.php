@@ -2,8 +2,8 @@
     require 'header.php';
     require 'config.php';
 
-    $fullname=$gender=$email=$comments='';
-    $fullname_err=$gender_err=$email_err=$comments_err='';
+    $fullname=$gender=$email=$phone=$address=$comments='';
+    $fullname_err=$gender_err=$email_err=$phone_err=$address_err=$comments_err='';
 //steps
 //1.grab user data from form
 if (isset($_POST['btn_submit'])){
@@ -21,7 +21,17 @@ if (isset($_POST['btn_submit'])){
         $gender_err = "Fill this field";
     }
     if (isset($_POST['email'])){
-        $email = $_POST['email'];
+            $email = $_POST['email'];
+        }else{
+            $email_err = "Fill this field";
+    }
+    if (isset($_POST['phone'])){
+        $phone = $_POST['phone'];
+    }else{
+        $phone_err = "Fill this field";
+    }
+    if (isset($_POST['address'])){
+        $address = $_POST['address'];
     }else{
         $email_err = "Fill this field";
     }
@@ -43,9 +53,10 @@ if (isset($_POST['btn_submit'])){
     }
     //5.1 hash password
 //    $password = md5($password);--------for future adjustments-------------------
-    
 
-    $sql = "INSERT INTO `students_application`(`id`, `fullname`, `gender`, `email`, `comments`) VALUES (NULL,'$fullname','$gender','$email','$email')";
+
+    $sql = "INSERT INTO `students_application`(`id`, `fullname`, `gender`, `email`, `phone`, `address`, `comments`) VALUES (NULL,'$fullname','$gender','$email','$email','$phone','$address','$comments')";
+
     if (mysqli_query($conn, $sql)){
         //6.take user to login page
         header("location:application_success.php");
@@ -64,10 +75,12 @@ if (isset($_POST['btn_submit'])){
 <!--Reg form-->
 <br><br>
 <!--<div class="container">-->
+
     <div class="row">
         <div class="col-md-3 col-lg-3 col-xl-3"></div>
         <div class="col-md-6 col-lg-6 col-xl-6">
             <div id="form-section">
+                <h3>Student Application</h3>
                 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
                     <fieldset>
                         <div class="form-group">
@@ -87,7 +100,7 @@ if (isset($_POST['btn_submit'])){
                         </div>
                         <div class="form-group">
                             <label for="">Mobile Phone Number</label>
-                            <input type="number" name="email" class="form-control" required>
+                            <input type="text" name="phone" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="">Home Address</label>
