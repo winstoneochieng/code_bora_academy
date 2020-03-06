@@ -164,7 +164,10 @@
     color: #fff;
     border-radius: 3px;
     font-size: 30px;
+}
+.section-b a button:hover{
     text-decoration: none;
+    font-size: 31px;
 }
 footer{
     height: 20vh;
@@ -177,7 +180,6 @@ footer{
 }
 .general-contacts p{
     margin-right: 160vh;
-    background-color: rgba(0, 0, 0, 0.24);
 }
 .form-inline{
     position: absolute;
@@ -187,7 +189,7 @@ footer{
 .social-media{
     float: right;
     padding-right: 20px;
-    margin-top: -80px;
+    margin-top: -30px;
     line-height: 25px;
 }
 .social-media a{

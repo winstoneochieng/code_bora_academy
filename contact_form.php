@@ -36,6 +36,7 @@ if (isset($_POST['btn-submit'])){
         <div class="alert alert-danger" <?php echo $msgClass?>><?php echo $msg?></div>
     <?php endif; ?>
     <fieldset>
+        <br> <br>
         <h1>Contact Us</h1>
         <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
             <div class="form-group">
@@ -48,14 +49,14 @@ if (isset($_POST['btn-submit'])){
             </div>
             <div class="form-group">
                 <label for="">Message</label> <br>
-                <textarea name="message" id="" cols="120" rows="7" placeholder="Write a message" required><?php echo isset($_POST['message'])?$message:'';?></textarea>
+                <textarea name="message" id="" cols="137" rows="7" placeholder="Write a message" required><?php echo isset($_POST['message'])?$message:'';?></textarea>
             </div>
             <br>
             <button name="btn-submit" type="submit" class="btn btn-primary">Send</button>
         </form>
     </fieldset>
 </div>
-
+<br> <br> <br>
 <?php
     require 'footer.php';
 ?>

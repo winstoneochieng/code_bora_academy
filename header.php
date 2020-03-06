@@ -24,7 +24,7 @@
 
     <ul class="menu">
         <a href="index.php">Home</a>
-        <a href="#">About</a>
+        <a href="about.php">About</a>
         <a href="staff.php">Staff</a>
         <a href="#">Events</a>
         <a href="contact_form.php">Contact Us</a>

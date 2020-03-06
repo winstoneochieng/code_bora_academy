@@ -6,19 +6,19 @@
             <button class="btn btn-secondary my-2 my-sm-0" type="submit">Subscribe</button>
         </form>
     </div>
-    <br>
-    <div class="general-contacts">
-        <p>General Enquiries: +254 711 0000000 <br>
-
-            WhatsApp Enquiries:  +254 71 0000000 <br>
-
-            Email: contact@codebora.com <br>
-
-            Admissions Enquiries: +254 712 0000000 <br>
-
-            Location: Bootstrap Plaza, Php Lane. Nairobi</p>
-    </div>
-    <br>
+<!--    <br>-->
+<!--    <div class="general-contacts">-->
+<!--        <p>General Enquiries: +254 711 0000000 <br>-->
+<!---->
+<!--            WhatsApp Enquiries:  +254 71 0000000 <br>-->
+<!---->
+<!--            Email: contact@codebora.com <br>-->
+<!---->
+<!--            Admissions Enquiries: +254 712 0000000 <br>-->
+<!---->
+<!--            Location: Bootstrap Plaza, Php Lane. Nairobi</p>-->
+<!--    </div>-->
+<!--    <br>-->
     <!--    social media-->
     <div class="social-media">
         <h5>Visit Us on Social media</h5>
@@ -28,9 +28,6 @@
         <a href="#">Instagram</a>
         <a href="#">LinkedIn</a>
     </div><br>
-
-    <h6>CodeBora Academy ISO Certified 2015 &copy</h6> <br>
-    <p>Built and maintained by CodeBora Designtech copy</p>
 
 </footer>
 <!-- Optional JavaScript -->
