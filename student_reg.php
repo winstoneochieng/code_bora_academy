@@ -6,7 +6,7 @@
     $fullname_err=$gender_err=$email_err=$comments_err='';
 //steps
 //1.grab user data from form
-if (isset($_POST['btn_login'])){
+if (isset($_POST['btn_submit'])){
     //2.clean data
 
     if (isset($_POST['fullname'])){
@@ -31,42 +31,31 @@ if (isset($_POST['btn_login'])){
         $comments_err = "Fill this field";
     }
 
+    //4.check if user exists
+    $sql="SELECT * FROM `users` WHERE email='$email'";
+//    results from db
+    $results = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($results>0)){
+        //user exists,go to login
+        echo "User Exits";
+        header("location:index.php");
+        exit();
+    }
     //5.1 hash password
 //    $password = md5($password);--------for future adjustments-------------------
+    
 
-    //5.2 add user
-    //use password & email to check if user exists
-
-    $sql = "SELECT `id`, `fullname`, `gender`, `email`, `comments` FROM `students_application` WHERE email='$email'";
-//        results from db
-    $results = mysqli_query($conn, $sql);
-    if (mysqli_num_rows($results) > 0) {
-//        grab indv data about user from db
-        while ($rows = mysqli_fetch_assoc($results)) {
-            $id = $rows['id'];
-            $email = $rows['email'];
-//            $user_type = $rows['user_type'];
-//                creat session for user
-            session_start();
-//            $_SESSION['Kipande'] = $id;
-//            $_SESSION['loggedin'] = true;
-//            $_SESSION['email'] = $email;
-
-
-//            if($user_type == 'supplier'){
-//                $_SESSION['aina_ya_mtumizi'] = true;
-//            }else{
-//                $_SESSION['aina_ya_mtumizi'] = false;
-//            }
-////            return to index page
-
-            header("location:application_success.php?msg_login");
-            exit();
-        }
-    } else {
-//           wrong password or email
-        header("location:student_reg.php");
+    $sql = "INSERT INTO `students_application`(`id`, `fullname`, `gender`, `email`, `comments`) VALUES (NULL,'$fullname','$gender','$email','$email')";
+    if (mysqli_query($conn, $sql)){
+        //6.take user to login page
+        header("location:application_success.php");
+        exit();
+    }else{
+        echo "Error:".mysqli_error($conn);
     }
+
+
+
 
 }
 
@@ -109,7 +98,7 @@ if (isset($_POST['btn_login'])){
                             <textarea name="comments" id="" cols="80" rows="5" placeholder="Reasons for interests in not more than 200 words"></textarea>
                         </div>
 
-                        <button class="btn btn-success btn-block" name="btn_login">Login</button>
+                        <button class="btn btn-success btn-block" name="btn_submit">Submit</button>
                     </fieldset>
                 </form>
             </div>
