@@ -161,11 +161,13 @@
 }
 .section-b a button{
     padding: 3px;
-    color: #be0000;
+    color: #fff;
     border-radius: 3px;
+    font-size: 30px;
+    text-decoration: none;
 }
 footer{
-    height: 43vh;
+    height: 20vh;
     background-color: rgba(0, 0, 0, 0.24);
     margin-bottom: 0;
 }
@@ -175,6 +177,7 @@ footer{
 }
 .general-contacts p{
     margin-right: 160vh;
+    background-color: rgba(0, 0, 0, 0.24);
 }
 .form-inline{
     position: absolute;
@@ -184,7 +187,7 @@ footer{
 .social-media{
     float: right;
     padding-right: 20px;
-    margin-top: -50px;
+    margin-top: -80px;
     line-height: 25px;
 }
 .social-media a{
@@ -194,6 +197,7 @@ footer{
 }
 .social-media h5{
     text-align: center;
+
 }
 footer h6{
     /*position: absolute;*/
@@ -205,10 +209,8 @@ footer h6{
 }
 footer p{
     float: right;
-    padding-top: 70px;
+    padding-top: 60px;
     position: absolute;
     right: 0%;
-
-
 }
 

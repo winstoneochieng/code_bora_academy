@@ -136,7 +136,7 @@
                 We are dedicated to providing good coding <br> practices and <br>
                 we would like you to be part of the community
             </h3>
-            <a href=""><button>Enroll Now</button></a>
+            <a href="student_reg.php"><button type="button" class="btn btn-danger btn-lg">Enroll Now!</button></a>
 <!--            <img src="images/LOGO-Lets-Code.png" alt="">-->
         </section>
 
@@ -147,20 +147,21 @@
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="example@email.com">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">Subscribe</button>
+
             </form>
       </div>
     <br>
-    <div class="general-contacts">
-    <p>General Enquiries: +254 711 0000000 <br>
-
-        WhatsApp Enquiries:  +254 71 0000000 <br>
-
-        Email: contact@codebora.com <br>
-
-        Admissions Enquiries: +254 712 0000000 <br>
-
-        Location: Bootstrap Plaza, Php Lane. Nairobi</p>
-    </div>
+<!--    <div class="general-contacts">-->
+<!--    <p>General Enquiries: +254 711 0000000 <br>-->
+<!---->
+<!--        WhatsApp Enquiries:  +254 71 0000000 <br>-->
+<!---->
+<!--        Email: contact@codebora.com <br>-->
+<!---->
+<!--        Admissions Enquiries: +254 712 0000000 <br>-->
+<!---->
+<!--        Location: Bootstrap Plaza, Php Lane. Nairobi</p>-->
+<!--    </div>-->
     <br>
 <!--    social media-->
     <div class="social-media">
