@@ -2,32 +2,42 @@
     require 'header.php';
     require 'config.php';
 
-    $email=$password1='';
-    $email_err=$password1_err='';
+    $fullname=$gender=$email=$comments='';
+    $fullname_err=$gender_err=$email_err=$comments_err='';
 //steps
 //1.grab user data from form
 if (isset($_POST['btn_login'])){
     //2.clean data
 
+    if (isset($_POST['fullname'])){
+        $fullname = $_POST['fullname'];
+    }else{
+        $fullname_err = "Fill this field";
+    }
+
+    if (isset($_POST['gender'])){
+        $gender = $_POST['gender'];
+    }else{
+        $gender_err = "Fill this field";
+    }
     if (isset($_POST['email'])){
         $email = $_POST['email'];
     }else{
         $email_err = "Fill this field";
     }
-
-    if (isset($_POST['password'])){
-        $password = $_POST['password'];
+    if (isset($_POST['comments'])){
+        $comments = $_POST['comments'];
     }else{
-        $password = "Fill this field";
+        $comments_err = "Fill this field";
     }
 
     //5.1 hash password
-    $password = md5($password);
+//    $password = md5($password);--------for future adjustments-------------------
 
     //5.2 add user
     //use password & email to check if user exists
 
-    $sql = "SELECT `id`, `email`, `password`, `user_type` FROM `users` WHERE email='$email' AND password='$password'";
+    $sql = "SELECT `id`, `fullname`, `gender`, `email`, `comments` FROM `students_application` WHERE email='$email'";
 //        results from db
     $results = mysqli_query($conn, $sql);
     if (mysqli_num_rows($results) > 0) {
@@ -73,7 +83,7 @@ if (isset($_POST['btn_login'])){
                     <fieldset>
                         <div class="form-group">
                             <label for="">Full Name</label>
-                            <input type="text" name="name" class="form-control" required>
+                            <input type="text" name="fullname" class="form-control" required>
                         </div>
                         <div class="form-group col-sm-5 col-md-5 col-lg-5 col-xl-5">
                             <label for="">Gender</label><br>
@@ -88,7 +98,7 @@ if (isset($_POST['btn_login'])){
                         </div>
                         <div class="form-group">
                             <label for="">Mobile Phone Number</label>
-                            <input type="email" name="email" class="form-control" required>
+                            <input type="number" name="email" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="">Home Address</label>
