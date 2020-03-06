@@ -45,7 +45,7 @@ if (isset($_POST['btn_login'])){
         while ($rows = mysqli_fetch_assoc($results)) {
             $id = $rows['id'];
             $email = $rows['email'];
-            $user_type = $rows['user_type'];
+//            $user_type = $rows['user_type'];
 //                creat session for user
             session_start();
 //            $_SESSION['Kipande'] = $id;
@@ -60,12 +60,12 @@ if (isset($_POST['btn_login'])){
 //            }
 ////            return to index page
 
-            header("location:index.php?msg_login");
+            header("location:application_success.php?msg_login");
             exit();
         }
     } else {
 //           wrong password or email
-        header("location:login.php");
+        header("location:student_reg.php");
     }
 
 }
