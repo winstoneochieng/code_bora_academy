@@ -13,7 +13,7 @@ if (isset($_POST['btn-submit'])){
 //        check required fields
     if (!empty($name) && !empty($email) && !empty($message)){
 //            passed
-        $toEmail = 'customersupport@unihouse.com';
+        $toEmail = 'customersupport@codebora.com';
         $subject = 'Contact Request from'.$name;
         $body = '<h2>Contact request</h2>
                     <h4>Name</h4><p>'.$name.'</p>

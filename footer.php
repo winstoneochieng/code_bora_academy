@@ -1,3 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css>
+    <link rel="stylesheet" href="https://bootswatch.com/cosmo/">
+
+<!--    ----------------------------------------->
+
 <footer>
     <div class="subscribe-form">
         <h2>Get the our latest news delivered to your inbox</h2>
@@ -22,11 +37,12 @@
     <!--    social media-->
     <div class="social-media">
         <h5>Visit Us on Social media</h5>
+<!--        <p>Call us on: 0700001000</p>-->
 
-        <a href="#">Facebook</a>
-        <a href="#">Twitter</a>
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
+        <i class="fa fa-facebook-square" aria-hidden="true"></i><a href="#">Facebook</a>
+        <i class="fa fa-twitter-square" aria-hidden="true"></i><a href="#">Twitter</a>
+        <i class="fa fa-instagram" aria-hidden="true"></i><a href="#">Instagram</a>
+        <i class="fa fa-linkedin-square" aria-hidden="true"></i><a href="#">LinkedIn</a>
     </div><br>
 
 </footer>

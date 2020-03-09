@@ -55,11 +55,11 @@ if (isset($_POST['btn_submit'])){
 //    $password = md5($password);--------for future adjustments-------------------
 
 
-    $sql = "INSERT INTO `students_application`(`id`, `fullname`, `gender`, `email`, `phone`, `address`, `comments`) VALUES (NULL,'$fullname','$gender','$email','$email','$phone','$address','$comments')";
+    $sql = "INSERT INTO `students_application`(`id`, `fullname`, `gender`, `email`, `phone`, `address`, `comments`) VALUES (NULL,'$fullname','$gender','$email','$phone','$address','$comments')";
 
     if (mysqli_query($conn, $sql)){
         //6.take user to login page
-        header("location:application_success.php");
+        header("location:application_success.php?msg_login");
         exit();
     }else{
         echo "Error:".mysqli_error($conn);
@@ -112,6 +112,8 @@ if (isset($_POST['btn_submit'])){
                         </div>
 
                         <button class="btn btn-success btn-block" name="btn_submit">Submit</button>
+                        <br> <br>
+                        <a href="login.php"><span style="color: black">Already registered? Sign In</span></a>
                     </fieldset>
                 </form>
             </div>
