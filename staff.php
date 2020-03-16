@@ -1,5 +1,6 @@
 <?php
 require 'header.php';
+require 'config.php';
 ?>
 
 
@@ -29,113 +30,134 @@ require 'header.php';
 
 <div class="row">
     <div class="col-md-4 col-lg-4 col-xl-4">
-        <div class="card" style="width: 18rem;">
+        <?php
+        $sql = "SELECT `staff_id`, `name`, `message`, `image`, `time_posted` FROM `staff`";
+        $staff = mysqli_query($conn, $sql);
+        while($row = mysqli_fetch_assoc($staff)){
+            $id = $row['staff_id'];
+            $name = $row['name'];
+            $message = $row['message'];
+            echo '
+            <div class="card">
             <img src="images/6542357_preview.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Staff X</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card\'s content.</p>
                 <a href="#" class="btn btn-primary">Read More</a>
+              
             </div>
-        </div>
-    </div>
-    <br>
-    <div class="col-md-4 col-lg-4 col-xl-4">
-        <div class="card" style="width: 18rem;">
-            <img src="images/6542357_preview.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Staff X</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
             </div>
-        </div>
+            ';
+        }
+        ?>
     </div>
-    <br>
-    <div class="col-md-4 col-lg-4 col-xl-4">
-        <div class="card" style="width: 18rem;">
-            <img src="images/6542357_preview.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Staff X</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-    </div>
-</div> <br>
-
-<div class="row">
-    <div class="col-md-4 col-lg-4 col-xl-4">
-        <div class="card" style="width: 18rem;">
-            <img src="images/6542357_preview.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Staff X</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="col-md-4 col-lg-4 col-xl-4">
-        <div class="card" style="width: 18rem;">
-            <img src="images/6542357_preview.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Staff X</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="col-md-4 col-lg-4 col-xl-4">
-        <div class="card" style="width: 18rem;">
-            <img src="images/6542357_preview.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Staff X</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-    </div>
-</div> <br>
-
-<div class="row">
-    <div class="col-md-4 col-lg-4 col-xl-4">
-        <div class="card" style="width: 18rem;">
-            <img src="images/6542357_preview.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Staff X</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-lg-4 col-xl-4">
-        <div class="card" style="width: 18rem;">
-            <img src="images/6542357_preview.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Staff X</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 col-lg-4 col-xl-4">
-        <div class="card" style="width: 18rem;">
-            <img src="images/6542357_preview.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Staff X</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-        </div>
-    </div>
-</div> <br>
-
-
-
-
-
-
-
+</div>
+<!--            <img src="images/6542357_preview.png" class="card-img-top" alt="...">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">Staff X</h5>-->
+<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--                <a href="#" class="btn btn-primary">Read More</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <br>-->
+<!--    <div class="col-md-4 col-lg-4 col-xl-4">-->
+<!--        <div class="card" style="width: 18rem;">-->
+<!--            <img src="images/6542357_preview.png" class="card-img-top" alt="...">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">Staff X</h5>-->
+<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--                <a href="#" class="btn btn-primary">Read More</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <br>-->
+<!--    <div class="col-md-4 col-lg-4 col-xl-4">-->
+<!--        <div class="card" style="width: 18rem;">-->
+<!--            <img src="images/6542357_preview.png" class="card-img-top" alt="...">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">Staff X</h5>-->
+<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--                <a href="#" class="btn btn-primary">Read More</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div> <br>-->
+<!---->
+<!--<div class="row">-->
+<!--    <div class="col-md-4 col-lg-4 col-xl-4">-->
+<!--        <div class="card" style="width: 18rem;">-->
+<!--            <img src="images/6542357_preview.png" class="card-img-top" alt="...">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">Staff X</h5>-->
+<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--                <a href="#" class="btn btn-primary">Read More</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <br>-->
+<!--    <div class="col-md-4 col-lg-4 col-xl-4">-->
+<!--        <div class="card" style="width: 18rem;">-->
+<!--            <img src="images/6542357_preview.png" class="card-img-top" alt="...">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">Staff X</h5>-->
+<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--                <a href="#" class="btn btn-primary">Read More</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <br>-->
+<!--    <div class="col-md-4 col-lg-4 col-xl-4">-->
+<!--        <div class="card" style="width: 18rem;">-->
+<!--            <img src="images/6542357_preview.png" class="card-img-top" alt="...">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">Staff X</h5>-->
+<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--                <a href="#" class="btn btn-primary">Read More</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div> <br>-->
+<!---->
+<!--<div class="row">-->
+<!--    <div class="col-md-4 col-lg-4 col-xl-4">-->
+<!--        <div class="card" style="width: 18rem;">-->
+<!--            <img src="images/6542357_preview.png" class="card-img-top" alt="...">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">Staff X</h5>-->
+<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--                <a href="#" class="btn btn-primary">Read More</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="col-md-4 col-lg-4 col-xl-4">-->
+<!--        <div class="card" style="width: 18rem;">-->
+<!--            <img src="images/6542357_preview.png" class="card-img-top" alt="...">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">Staff X</h5>-->
+<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--                <a href="#" class="btn btn-primary">Read More</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="col-md-4 col-lg-4 col-xl-4">-->
+<!--        <div class="card" style="width: 18rem;">-->
+<!--            <img src="images/6542357_preview.png" class="card-img-top" alt="...">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">Staff X</h5>-->
+<!--                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--                <a href="#" class="btn btn-primary">Read More</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div> <br>-->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
 
 
 <?php

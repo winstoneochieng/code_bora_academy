@@ -47,9 +47,10 @@ if (isset($_POST['btn_login'])){
             $user_type = $rows['user_type'];
 //                creat session for user
             session_start();
-            $_SESSION['Kipande'] = $id;
+            $_SESSION['user_id'] = $id;
             $_SESSION['loggedin'] = true;
             $_SESSION['email'] = $email;
+            $_SESSION['admin'] = true;
 
 
             if($user_type == 'admin'){
@@ -64,10 +65,11 @@ if (isset($_POST['btn_login'])){
         }
     } else {
 //           wrong password or email
-        header("location:login.php?msg_stafflogin");
+        header("location:login.php?msg_login");
     }
 
 }
+
 
 
 ?>
