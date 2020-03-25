@@ -55,8 +55,10 @@ if (isset($_POST['btn_login'])){
 
             if($user_type == 'admin'){
                 $_SESSION['user_type'] = true;
+
             }else{
-                $_SESSION['user_type'] = false;
+//                $_SESSION['user_type'] = false;
+            echo "Welcome2";
             }
 //            return to index page
 

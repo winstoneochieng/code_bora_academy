@@ -26,7 +26,7 @@
         <a href="index.php">Home</a>
         <a href="about.php">About</a>
         <a href="staff.php">Staff</a>
-        <a href="student_reg.php">Register</a>
+        <a href="user_signup.php">Register</a>
         <a href="contact_form.php">Contact Us</a>
         <a href="#">Media Center</a>
         <a href="admin_signup.php">Admin</a>
